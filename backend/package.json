@@ -4,8 +4,8 @@
   "description": "Backend for hp-database",
   "main": "server.js",
   "scripts": {
-    "start": "node server.cjs",
-    "server": "nodemon server.cjs"
+    "start": "doppler run -- node server.cjs",
+    "server": "doppler run -- nodemon server.cjs"
   },
   "author": "Oliver Jones & Rikie Patrick",
   "license": "MIT",
