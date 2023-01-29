@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const { requiredString, requiredUniqueNumber } = require('./modelTypes.cjs');
+const mongoose = require("mongoose");
+const { requiredString, requiredUniqueNumber } = require("./modelTypes.cjs");
 
 // Destructuring mongooses Schema method into a const //
 const { Schema } = mongoose;
@@ -11,15 +11,15 @@ const machineSchema = new Schema(
     workCentre: requiredString,
     manufacturer: String,
     model: String,
-    pallets: [{ type: Schema.Types.ObjectID, ref: 'Pallet' }],
+    pallets: [{ type: Schema.Types.ObjectID, ref: "Pallet" }],
     nextService: Date,
     notes: String,
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
 // Create mongoose model from creating Schema //
 // Given name in first argument is always singular //
-const machineSchemaModel = mongoose.model('Machine', machineSchema);
+const machineSchemaModel = mongoose.model("Machine", machineSchema);
 
 module.exports = machineSchemaModel;

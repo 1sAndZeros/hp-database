@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { requiredString, requiredUniqueString } = require('./modelTypes.cjs');
-const mongoose = require('mongoose');
+const { requiredString, requiredUniqueString } = require("./modelTypes.cjs");
+const mongoose = require("mongoose");
 
 // Destructuring mongooses Schema method into a const //
 const { Schema } = mongoose;
@@ -20,11 +20,11 @@ const userSchema = new Schema(
       // avatar: String,
     },
   },
-  { timestamps: true },
+  { timestamps: true }
 );
 
 // Create mongoose model from creating Schema //
 // Given name in first argument is always singular //
-const userSchemaModel = mongoose.model('User', userSchema);
+const userSchemaModel = mongoose.model("User", userSchema);
 
 module.exports = userSchemaModel;

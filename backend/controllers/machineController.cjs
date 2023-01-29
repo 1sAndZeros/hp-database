@@ -30,7 +30,7 @@ const getMachine = asyncHandler(async (req, res) => {
 // @route         POST /api/machines/:id
 // @access        Public
 const createMachine = asyncHandler(async (req, res) => {
-  console.log('I got here');
+  console.log("I got here");
   if (!req.body) {
     res.status(httpStatus.bad);
     throw new Error("Please add a text field");

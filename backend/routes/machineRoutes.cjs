@@ -11,7 +11,7 @@ const {
   createMachine,
   updateMachine,
   deleteMachine,
-} = require('../controllers/machineController.cjs');
+} = require("../controllers/machineController.cjs");
 
 // This file is entered from server.cjs when a filepath is hit //
 // It will then jump to the relevant router, and call one of the //
